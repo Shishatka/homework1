@@ -45,10 +45,14 @@ public class Main {
 
         System.out.println(boxer2 % boxer1);
         System.out.println("-------------------------------");
-        var workersTotal = 640 / 8;
+        var totalHours = 640;
+        var eachWorkerHours = 8;
+
+        var workersTotal = totalHours / eachWorkerHours;
         System.out.println("Всего работников в компании - " + workersTotal + " человек");
         System.out.println("-------------------------------");
-        var t = 640 / (workersTotal + 94);
-        System.out.println("Если в компании работает " + (workersTotal + 94) + " человек, то всего " + t + " часов работы может быть поделено между сотрудниками");
+        var moreWorkersPresent = workersTotal + 94;
+        totalHours = eachWorkerHours * (moreWorkersPresent);
+        System.out.println("Если в компании работает " + (moreWorkersPresent) + " человек, то всего " + totalHours + " часов работы может быть поделено между сотрудниками");
     }
 }
